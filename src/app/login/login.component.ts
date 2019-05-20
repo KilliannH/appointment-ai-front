@@ -28,6 +28,14 @@ export class LoginComponent implements OnInit {
     this.authenticationService.logout();
   }
 
+  setEmail(email) {
+    return this.email = email;
+  }
+
+  setPassword(password) {
+    return this.password = password;
+  }
+
   submit() {
 
     this.authenticationService.login(this.email, this.password)

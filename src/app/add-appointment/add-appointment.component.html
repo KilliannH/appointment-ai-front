@@ -1,3 +1,25 @@
-<p>
-  add-appointment works!
-</p>
+<div class="container-fluid under-the-nav">
+  <h4>Add new appointment</h4>
+  <br>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <mat-card>
+        <mat-form-field class="login-input-full-width">
+          <input matInput placeholder="Name" type="text" (change)="setName($event.target.value)">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="login-input-full-width">
+          <input matInput placeholder="Notes" type="text" (change)="setNotes($event.target.value)">
+        </mat-form-field>
+        <br><br>
+        <mat-form-field class="login-input-full-width" style="min-width: 250px;">
+          <input matInput placeholder="DateTime" type="datetime-local" (change)="setDate($event.target.value)">
+        </mat-form-field>
+
+        <br><br>
+        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+      </mat-card>
+    </div>
+  </div>
+</div>

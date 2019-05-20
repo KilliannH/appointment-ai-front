@@ -1,3 +1,19 @@
-<p>
-  appointment-details works!
-</p>
+<div class="container-fluid under-the-nav">
+  <div class="row justify-content-md-center">
+    <div class="col-md-5">
+      <mat-card>
+        <mat-card-title>{{appointment.name}}</mat-card-title>
+        <mat-card-subtitle [ngClass]="appointment.sent ? '' : 'green'">{{appointment.sent ? "Sent" : "Waiting"}}</mat-card-subtitle>
+        <mat-card-content>
+          <p>{{appointment.notes}}</p>
+        </mat-card-content>
+        <mat-card-footer>
+          <button mat-raised-button color="primary" style="margin-bottom: 10px; margin-left: 10px;"><mat-icon>edit</mat-icon>&nbsp; Edit</button>
+          <span class="spacer"></span>
+          <button mat-raised-button color="accent" (click)="delete()" style="margin-bottom: 10px; margin-left: 10px;"><mat-icon>delete</mat-icon>&nbsp; Delete</button>
+        </mat-card-footer>
+      </mat-card>
+      <br>
+    </div>
+  </div>
+</div>

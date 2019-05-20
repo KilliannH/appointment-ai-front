@@ -1,25 +1,24 @@
-<div class="container">
-  <br><br>
-  <div class="col-md-8 offset-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Login</h5>
-        <hr>
-          <div>
-            <label for="email">Email :
-              <input id="email" class="form-control" [(ngModel)]="email" placeholder="Email" type="email">
-            </label>
-            <label for="password">Password :
-              <input id="password" class="form-control" [(ngModel)]="password" placeholder="Password" type="password">
-            </label>
-          </div>
+<div class="container-fluid under-the-nav">
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <h4>Login</h4>
+      <br>
+    </div>
+  </div>
 
-          <hr>
-
-          <div class="float-right">
-            <button (click)="submit()" class="btn btn-primary">Submit</button>
-          </div>
-      </div>
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <mat-card>
+        <mat-form-field class="login-input-full-width">
+          <input matInput placeholder="Email" type="email" (change)="setEmail($event.target.value)">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="login-input-full-width">
+          <input matInput placeholder="Password" type="password" (change)="setPassword($event.target.value)">
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+      </mat-card>
     </div>
   </div>
 </div>
